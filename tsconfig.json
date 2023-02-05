@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "downlevelIteration": true,
     "lib": [
       "dom",
       "dom.iterable",
@@ -29,5 +30,18 @@
     "@styles*": ["styles/*"],
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "src/shared/components/Header/NavPanel/NavPanelItem"],
+
+  /*"@typescript-eslint/naming-convention": [
+    "error",
+    {
+      "selector": "interface",
+      "format": ["PascalCase"],
+      "prefix": "never",
+      "custom": {
+        "regex": "^I[A-Z]",
+        "match": true
+      }
+    }
+  ]*/
 }

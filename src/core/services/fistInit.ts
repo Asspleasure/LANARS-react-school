@@ -7,8 +7,7 @@ import five from '../../assets/images/placeholders/lt47o5qub95qmqkx.jpg';
 import six from '../../assets/images/placeholders/Stunning-Space-Wallpapers-5_4d470f76dc99e18ad75087b1b8410ea9.webp';
 import seven from '../../assets/images/placeholders/TwYWpt.webp';
 
-
-const getBase64StringFromDataURL = (dataURL: string) => {
+export const getBase64StringFromDataURL = (dataURL: string) => {
   return dataURL?.replace('data:', '').replace(/^.+,/, '');
 };
 

@@ -4,8 +4,8 @@ import { albumsSlice } from './slices/albumsSlice';
 
 const store = configureStore({
   reducer: {
-    photo: photosSlice.reducer,
-    album: albumsSlice.reducer,
+    photos: photosSlice.reducer,
+    albums: albumsSlice.reducer,
   },
 });
 

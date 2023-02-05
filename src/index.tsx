@@ -5,7 +5,11 @@ import {Provider} from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import Storage from 'core/services/back-end/Storage';
 import { firstInit } from 'core/services/fistInit';
+import { BrowserRouter } from 'react-router-dom';
 import store from './shared/store';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { theme } from 'styles/themes/generalTheme';
 
 (async () => {
   await Storage.createObjectStore(['albums', 'photos']);
@@ -16,13 +20,14 @@ import store from './shared/store';
   root.render(
     <React.StrictMode>
       <Provider store={store}>
-          <App />
+        <BrowserRouter>
+          <ThemeProvider theme={theme}>
+            <CssBaseline>
+              <App />
+            </CssBaseline>
+          </ThemeProvider>
+        </BrowserRouter>
       </Provider>
     </React.StrictMode>
   );
-
-  // If you want to start measuring performance in your app, pass a function
-  // to log results (for example: reportWebVitals(console.log))
-  // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-  reportWebVitals();
 })();

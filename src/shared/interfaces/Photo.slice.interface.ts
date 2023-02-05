@@ -1,5 +1,5 @@
 import { StatusMessageStrings } from 'shared/store/types';
-import {PhotoInterface} from './Photo.interface';
+import { PhotoInterface } from './Photo.interface';
 
 export interface IPhotosState {
   photosList: PhotoInterface[];
